@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-family: "Google Sans Code", monospace;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+*::selection {
+	background-color: var(--primary-heavenly);
+	color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+/* variables  */
+:root {
+	--bg-dark-blue: #0F172A;
+	--primary-heavenly: #38BDF8;
+	--accent: #22D3EE;
+	--text-main: #94A3B8;
+	--texr-accent: #E2E8F0;
+	--button: #0284C7;
+	--line: #48515E;
+}
+
+body {
+	background: var(--bg-dark-blue);
+	height: 6000000vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--text-main);
+	font-size: 16px;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	color: white;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+/* === header and navbar === */
+header,
+main {
+	margin: 0 auto;
+	width: 85%;
+	background: transparent;
+}
+
+.container {
+	background: var(--bg-dark-blue);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 16px;
+	position: fixed;
+	z-index: 1;
+	right: 0;
+	left: 0;
+	top: 0;
+	transition: all .3s ease;
+}
+
+.logo img {
+	width: 60px;
+	position: relative;
+	z-index: 3;
+}
+
+.menu {
+	width: 32px;
+	height: 24px;
+	position: relative;
+	cursor: pointer;
+	right: 12px;
+	top: -4px;
+	z-index: 2;
+}
+
+.menu span {
+	background: #FFFFFF;
+	display: flex;
+	width: 100%;
+	height: 2px;
+	border-radius: 50px;
+	position: absolute;
+	left: 0;
+	transition: all .3s ease;
+}
+
+.menu span:first-child {
+	top: 0;
+	width: 40%;
+}
+
+.menu span:nth-child(2) {
+	top: 12px;
+	width: 70%;
+}
+
+.menu:hover span:first-child,
+.menu:hover span:last-child {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+/* === background blur ==== */
+
+.background-blur {
+	width: 100%;
+	height: 100%;
+	background: #0F172AA1;
+	backdrop-filter: blur(4px);
+	position: fixed;
+	z-index: 1;
+	display: none;
+}
+
+
+
+/* === navbar ==== */
+nav {
+	z-index: 2;
+	position: fixed;
+	right: -500px;
+	top: 0;
+	background: #17264B;
+	bottom: 0;
+	width: 75%;
+	transition: all .3s ease;
+}
+
+ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	gap: 30px;
+}
+
+
+
+
+
+
+/* === hero === */
+main {
+	position: relative;
+	top: 200px;
+}
+
+#hero span {
+	color: var(--primary-heavenly);
+}
+
+#hero h1 {
+	font-size: 32px;
+	color: var(--texr-accent);
+	margin-top: 10px;
+}
+
+#hero h1>span {
+	color: var(--text-main);
+}
+
+#hero p {
+	color: var(--text-main);
+	margin-top: 16px;
+	margin-bottom: 88px;
+	line-height: 1.5;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+#hero a,
+nav a:nth-child(6) {
+	border: 1.8px solid var(--button);
+	padding: 16px 72px;
+	border-radius: 4px;
+	position: relative;
+	color: var(--primary-heavenly);
+}
+
+#hero a:hover,
+nav a:nth-child(6):hover {
+	box-shadow: 4px 4px 0 var(--button);
+	top: -4px;
+	left: -4px;
+}
+
+
+
+
+
+
+
+/* ==== about me ===== */
+#about {
+	margin-top: 200px;
+	z-index: 0;
+}
+
+#about p {
+	color: var(--text-main);
+	margin: 32px 0;
+	font-size: 14px;
+	line-height: 2em;
+}
+
+.skills {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(100px, 1fr));
+	margin-top: 64px;
+}
+
+.skill {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.skill span {
+	color: var(--primary-heavenly);
+}
+
+.about_sec img {
+	width: 100%;
+	border-radius: 4px;
+}
+
+.about_img {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	margin-top: 80px;
+	width: 70%;
+}
+
+.about_img:after {
+	content: "";
+	position: absolute;
+	width: 100.5%;
+	height: 100.5%;
+	border: 1px solid var(--primary-heavenly);
+	display: flex;
+	z-index: -1;
+	top: 30px;
+	left: 30px;
+	border-radius: 4px;
+}
+
+.title h2 {
+	font-size: 24px;
+	background: var(--bg-dark-blue);
+	position: relative;
+	display: inline;
+	padding: 0 10px;
+	margin: 32px 0;
+	
+}
+
+.title {
+	margin-top: 102px;
+}
+
+.title h2 span {
+	color: var(--primary-heavenly);
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.title:after {
+	content: "";
+	width: 100%;
+	height: .1px;
+	background: var(--line);
+	position: relative;
+	display: flex;
+	top: -14px;
+	z-index: -1;
+}
+
+
+
+
+
+
+/* ===== animation relod ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
