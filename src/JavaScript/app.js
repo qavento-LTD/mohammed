@@ -67,6 +67,8 @@ bg_blur.addEventListener('click', () => {
     span1.style.width = '40%';
     bg_blur.style.display = 'none';
 })
+
+
 let lastScrollTop = 0; 
 window.addEventListener('scroll', () => {
   let currentScroll = window.scrollY;
@@ -95,7 +97,7 @@ function revealOnScroll() {
   for (let i = 0; i < reveals.length; i++) {
     const windowHeight = window.innerHeight;
     const revealTop = reveals[i].getBoundingClientRect().top;
-    const revealPoint = 100; // قلل الرقم لو عايزها تظهر أسرع
+    const revealPoint = 50; // قلل الرقم لو عايزها تظهر أسرع
 
     if (revealTop < windowHeight - revealPoint) {
       reveals[i].classList.add('active');
